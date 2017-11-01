@@ -1,10 +1,8 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
 import React from 'react';
-
+import 'antd/dist/antd.css'
+import './style/index.less';
+import Menu from './frame/menu'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 const Home = () => (
   <div>
@@ -56,6 +54,7 @@ const Topics = ({ match }) => (
 const App = () => (
   <Router>
     <div>
+      <Menu/>
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
